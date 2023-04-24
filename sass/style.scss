@@ -1,0 +1,75 @@
+//color-----------------------------------
+$colors:(
+  icon-gray:#777,
+  white: #ffffff,
+  back-white:#fff,
+  back-footer:#cfd8dc,
+  back-gray:#d0dfea,
+  light-blue: #e3f2fd,
+  light-gray: #8c8c8c,
+  back-blue: #6ba7eb,
+  even-row: #f9f9f9,
+  odd-row: #e0efff
+);
+
+//padding-----------------------------------
+$section-top: 50px;
+$title-bottom:50px;
+
+
+
+//inner-----------------------------------
+.inner {
+  margin: 0 auto;
+  width: 1100px;
+}
+
+
+
+//responsive-----------------------------------
+@mixin tab {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: 797px) {
+    @content;
+  }
+}
+
+
+
+
+
+//-----------------------------------
+@mixin section-font {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 10px;
+}
+
+@mixin box-size($s-list) {
+  width: $s-list;
+  height: $s-list;
+}
+
+@mixin section-bottom($section-bottom) {
+  padding-bottom: $section-bottom;
+}
+
+@mixin main_img {
+  background: url(../img/keyvisual/keyvisual.jpg) no-repeat center / cover;
+}
+
+
+
+/*---------------------------------------------*/
+@import "_header";
+@import "_main";
+@import "_footer";
+
+
+
+/*---------------------------------------------*/

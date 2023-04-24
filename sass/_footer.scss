@@ -1,0 +1,36 @@
+/*footerここから-------------------*/
+.footer {
+  width: 100%;
+  background-color: map-get($colors, back-footer);
+
+  .inner {
+    @extend .inner;
+
+    @include tab {
+      margin: 0 auto;
+      width: 97%;
+    }
+
+    @include sp {
+      margin: 0 auto;
+      width: 97%;
+    }
+
+    &.f_container {
+      padding: 20px 0 25px;
+      display: flex;
+      justify-content: flex-end;
+
+      @include tab {
+        width: 97%;
+      }
+
+      .f_text {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}
+
+/*footerここまで-------------------*/

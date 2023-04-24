@@ -1,0 +1,385 @@
+/*---------------------------------------------------------------------
+mainここから
+---------------------------------------------------------------------*/
+.main {
+  margin-top: 78px;
+
+  /*key visualここから--------------------------------------------------*/
+  .key_visual {
+    @include main_img;
+    padding: 400px 0;
+
+    @include tab {
+      @include main_img;
+      padding: 250px 0;
+    }
+
+    @include sp {
+      @include main_img;
+      padding: 200px 0;
+    }
+
+    .inner {
+      @extend .inner;
+      @include tab {
+        margin: 0 auto;
+        width: 97%;
+      }
+      @include sp {
+        margin: 0 auto;
+        width: 97%;
+      }
+
+      .title_area {
+        width: 100%;
+        text-align: center;
+
+        @include tab {
+          margin: 0 auto;
+          width: 100%;
+        }
+
+        @include sp {
+          margin: 0 auto;
+          width: 100%;
+        }
+
+        .k_title {
+          font-size: 65px;
+          font-weight: 700;
+          color: map-get($colors, back-blue);
+
+          @include tab {
+            margin: 0 auto;
+            width: 100%;
+          }
+
+          @include sp {
+            margin: 0 auto;
+            width: 100%;
+            font-size: 40px;
+          }
+        }
+
+        .k_sub_title {
+          margin-top: 30px;
+          font-size: 40px;
+          font-weight: 700;
+          color: map-get($colors, white);
+
+          @include tab {
+            margin: 0 auto;
+            width: 100%;
+          }
+
+          @include sp {
+            margin: 0 auto;
+            width: 100%;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  /*workここから----------------------------------------------------*/
+  .work {
+    width: 100%;
+    background-color: map-get($colors, light-blue);
+    padding-top: $section-top;
+    @include tab {
+      @include section-bottom(50px);
+    }
+
+    .inner {
+      @extend .inner;
+      @include tab {
+        margin: 0 auto;
+        width: 97%;
+      }
+      @include sp {
+        margin: 0 auto;
+        width: 97%;
+      }
+
+      .w_area {
+        display: flex;
+        @include tab {
+          display: flex;
+          flex-direction: column;
+          margin: 0 auto;
+          width: 100%;
+        }
+
+        .w_imgarea {
+          width: 40%;
+          line-height: 0;
+          text-align: center;
+          @include tab {
+            width: 100%;
+          }
+
+          .pc_img {
+            width: 250px;
+          }
+        }
+
+        .w_textarea {
+          width: 60%;
+          text-align: center;
+          @include tab {
+            width: 100%;
+          }
+
+          .w_title {
+            @include section-font;
+            padding-top: 20px;
+            padding-bottom: 35px;
+            @include tab {
+              width: 60%;
+              margin: 0 auto;
+            }
+          }
+
+          .w_text {
+            font-size: 15px;
+            line-height: 18px;
+            word-break: break-all;
+            @include tab {
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+  /*skillsここから----------------------------------------------------*/
+  .skills {
+    width: 100%;
+    background-color: map-get($colors, back-white);
+    text-align: center;
+    padding-top: $section-top;
+    @include section-bottom(70px);
+
+    .inner {
+      @extend .inner;
+      @include tab {
+        margin: 0 auto;
+        width: 97%;
+      }
+      @include sp {
+        margin: 0 auto;
+        width: 97%;
+      }
+
+      .s_title {
+        @include section-font;
+        margin-bottom: $title-bottom;
+        @include sp {
+          width: 100%;
+          margin: 0 auto;
+          margin-bottom: $title-bottom;
+        }
+      }
+
+      .s_container {
+        display: grid;
+        gap: 100px;
+        grid-template-columns: 1fr 1fr 1fr;
+        @include sp {
+          width: 100%;
+          align-items: center;
+          display: grid;
+          gap: 0px;
+          grid-template-columns: 1fr;
+        }
+
+        .s_list {
+          position: relative;
+          z-index: 1;
+          margin: 0 auto;
+          @include box-size(300px);
+          transition: 0.7s;
+          -webkit-transition: 0.7s;
+          -moz-transition: 0.7s;
+          -o-transition: 0.7s;
+          opacity: 0.7;
+        }
+        @include sp {
+          .s_list:nth-child(3n+1) {
+            width: 100%;
+            margin-top: 80px;
+          }
+          .s_list:nth-child(1) {
+            width: 100%;
+            margin-top: 0px;
+          }
+          .s_list:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  /*SELECT＿PLANここから----------------------------------------------------*/
+  .select_plan {
+    width: 100%;
+    background-color: map-get($colors, back-gray);
+    padding-top: $section-top;
+    @include section-bottom(50px);
+
+    .inner {
+      @extend .inner;
+      @include tab {
+        margin: 0 auto;
+        width: 97%;
+      }
+      @include sp {
+        margin: 0 auto;
+        width: 97%;
+      }
+
+      .grid_area {
+        margin: 0 auto;
+        width: 100%;
+        table-layout: fixed;
+
+        caption {
+          @include section-font;
+          padding-bottom: $title-bottom;
+          caption-side: top;
+          @include tab {
+            width: 100%;
+            margin: 0 auto;
+          }
+        }
+
+        td,
+        th {
+          padding: 10px;
+          border-left: 2px solid #fff;
+          text-align: center;
+        }
+        @include sp {
+          th[scope="col"] {
+            font-size: 14px;
+            line-height: 22px;
+          }
+
+          td {
+            font-size: 12px;
+          }
+        }
+
+        tr,
+        th:first-child {
+          border-left: none;
+        }
+
+        tr:nth-child(even) {
+          background-color: map-get($colors, even-row);
+        }
+
+        tr:nth-child(odd) {
+          background-color: map-get($colors, odd-row);
+        }
+
+        th[scope="col"] {
+          background-color: map-get($colors, back-blue);
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+
+
+  /*snsここから----------------------------------------------------*/
+  .sns {
+    width: 100%;
+    background-color: map-get($colors, light-blue);
+    padding: 200px 0;
+    text-align: center;
+    @include tab {
+      padding: 50px 0;
+    }
+    @include sp {
+      width: 100%;
+      background-color: map-get($colors, light-blue);
+      padding: 0px;
+    }
+
+    .inner {
+      @extend .inner;
+      @include tab {
+        margin: 0 auto;
+        width: 97%;
+      }
+      @include sp {
+        margin: 0 auto;
+        width: 97%;
+      }
+
+      .sns_logo {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 185px 185px 185px 185px;
+        justify-content: center;
+        @include tab {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0px;
+        }
+
+        li {
+          display: inline-block;
+          padding: 25px 0;
+          @include tab {
+            padding: 50px 0;
+          }
+
+          .fab,
+          .fa {
+            color: map-get($colors, light-gray);
+            overflow: hidden;
+            font-size: 40px;
+            @include sp {
+              color: map-get($colors, light-gray);
+              overflow: hidden;
+              font-size: 40px;
+              padding: 50px 0;
+            }
+          }
+        }
+
+        li {
+          z-index: 1;
+          transition: 0.7s;
+          -webkit-transition: 0.7s;
+          -moz-transition: 0.7s;
+          -o-transition: 0.7s;
+
+          &:hover {
+            color: map-get($colors, white);
+            background-color: map-get($colors, white);
+          }
+        }
+      }
+    }
+  }
+}//.main終了タグ
+
+/*---------------------------------------------------------------------
+mainここまで
+---------------------------------------------------------------------*/
